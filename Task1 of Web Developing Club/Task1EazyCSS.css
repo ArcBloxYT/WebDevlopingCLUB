@@ -1,0 +1,549 @@
+/* =========================================
+   BASIC SETTINGS
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f7ff;
+    color: #222;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   NAVIGATION BAR
+========================================= */
+
+nav {
+    width: 100%;
+
+    padding: 18px 7%;
+
+    background: linear-gradient(
+        90deg,
+        #0f172a,
+        #1e3a8a,
+        #2563eb
+    );
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Club Name */
+
+nav h2 {
+    color: white;
+
+    font-size: 26px;
+
+    letter-spacing: 1px;
+}
+
+
+/* Navigation List */
+
+nav ul {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    list-style: none;
+}
+
+
+/* Navigation Links */
+
+nav ul li a {
+    display: block;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 10px 16px;
+
+    border-radius: 20px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Navigation Hover */
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   HOME SECTION
+========================================= */
+
+.home {
+    min-height: 90vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #0f2027,
+        #203a43,
+        #2c5364
+    );
+
+    padding: 30px;
+}
+
+
+/* Home Heading */
+
+.home h1 {
+    font-size: 55px;
+
+    margin-bottom: 15px;
+}
+
+
+/* Name Color */
+
+.home h1 span {
+    color: #00e5ff;
+}
+
+
+/* Home Paragraph */
+
+.home p {
+    font-size: 21px;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.button {
+    display: inline-block;
+
+    background: linear-gradient(
+        90deg,
+        #00c6ff,
+        #0072ff
+    );
+
+    color: white;
+
+    padding: 13px 30px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 5px 15px rgba(0, 114, 255, 0.4);
+
+    transition: 0.3s;
+}
+
+
+/* Button Hover */
+
+.button:hover {
+    transform: translateY(-3px) scale(1.05);
+
+    box-shadow:
+        0 8px 25px rgba(0, 114, 255, 0.5);
+}
+
+
+/* =========================================
+   ABOUT SECTION
+========================================= */
+
+.about {
+    background-color: white;
+
+    padding: 90px 8%;
+}
+
+
+/* Section Headings */
+
+.about h2,
+.hobbies h2,
+.contact h2 {
+    text-align: center;
+
+    font-size: 38px;
+
+    margin-bottom: 50px;
+
+    color: #172554;
+}
+
+
+/* About Box */
+
+.about-box {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 60px;
+
+    background-color: #f8faff;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   PROFILE IMAGE
+========================================= */
+
+.profile img {
+    width: 230px;
+
+    height: 230px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 6px solid #0072ff;
+
+    box-shadow:
+        0 0 0 8px #dbeafe,
+        0 10px 25px rgba(0, 114, 255, 0.3);
+}
+
+
+/* =========================================
+   ABOUT TEXT
+========================================= */
+
+.about-text {
+    flex: 1;
+}
+
+
+.about-text h3 {
+    font-size: 28px;
+
+    color: #0072ff;
+
+    margin-bottom: 15px;
+}
+
+
+.about-text p {
+    color: #555;
+
+    margin-bottom: 15px;
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   HOBBIES SECTION
+========================================= */
+
+.hobbies {
+    padding: 90px 8%;
+
+    background: linear-gradient(
+        135deg,
+        #eef2ff,
+        #e0f2fe
+    );
+}
+
+
+/* Cards Container */
+
+.cards {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+
+/* =========================================
+   HOBBY CARD
+========================================= */
+
+.card {
+    width: 240px;
+
+    min-height: 200px;
+
+    padding: 30px 20px;
+
+    text-align: center;
+
+    background-color: white;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.1);
+
+    border-top: 5px solid #0072ff;
+
+    transition: 0.3s;
+}
+
+
+/* Card Hover */
+
+.card:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Card Heading */
+
+.card h3 {
+    font-size: 23px;
+
+    margin-bottom: 15px;
+
+    color: #172554;
+}
+
+
+/* Card Paragraph */
+
+.card p {
+    color: #666;
+}
+
+
+/* =========================================
+   CONTACT SECTION
+========================================= */
+
+.contact {
+    background-color: white;
+
+    text-align: center;
+
+    padding: 90px 20px;
+}
+
+
+.contact h2 {
+    margin-bottom: 35px;
+}
+
+
+.contact p {
+    margin: 12px;
+
+    font-size: 17px;
+
+    color: #444;
+}
+
+
+/* Instagram Link */
+
+.contact p a {
+    color: #0072ff;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+
+.contact p a:hover {
+    text-decoration: underline;
+}
+
+
+/* Contact Button */
+
+.contact .button {
+    margin-top: 20px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    background-color: #111827;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+
+footer p {
+    font-size: 14px;
+
+    color: #cbd5e1;
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+
+    /* Navigation */
+
+    nav {
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 18px 15px;
+    }
+
+
+    nav h2 {
+        font-size: 24px;
+    }
+
+
+    nav ul {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 5px;
+    }
+
+
+    nav ul li a {
+        padding: 8px 12px;
+
+        font-size: 14px;
+    }
+
+
+    /* Home */
+
+    .home {
+        min-height: 80vh;
+    }
+
+
+    .home h1 {
+        font-size: 36px;
+    }
+
+
+    .home p {
+        font-size: 17px;
+    }
+
+
+    /* About */
+
+    .about {
+        padding: 60px 20px;
+    }
+
+
+    .about-box {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 30px 20px;
+    }
+
+
+    .profile img {
+        width: 180px;
+
+        height: 180px;
+    }
+
+
+    /* Headings */
+
+    .about h2,
+    .hobbies h2,
+    .contact h2 {
+        font-size: 30px;
+    }
+
+
+    /* Hobby Cards */
+
+    .card {
+        width: 90%;
+
+        max-width: 320px;
+    }
+
+}
