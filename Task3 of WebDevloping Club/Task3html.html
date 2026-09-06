@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Group Expense Splitter</title>
+
+    <link rel="stylesheet" href="Task3CSS.css">
+</head>
+
+<body>
+
+
+    <header class="top-bar">
+
+        <div class="logo">
+            💰 Expense Splitter
+        </div>
+
+        <div class="user">
+            <span class="user-circle" id="userInitial">?</span>
+            <span id="userName">Guest</span>
+        </div>
+
+    </header>
+
+
+ 
+    <aside class="sidebar">
+
+        <div class="menu-item active">
+            🏠 Dashboard
+        </div>
+
+        <div class="menu-item">
+            🕐 Recent Activity
+        </div>
+
+        <div class="menu-item">
+            💰 All Expenses
+        </div>
+
+
+
+        <div class="section-title">
+            <span>GROUPS</span>
+            <button id="addGroupBtn">+ Add</button>
+        </div>
+
+        <div id="groupList">
+            <p class="empty-text">
+                No groups yet.
+            </p>
+        </div>
+
+
+        <div class="section-title friends-title">
+            <span>MEMBERS</span>
+        </div>
+
+        <div id="memberList">
+            <p class="empty-text">
+                No members yet.
+            </p>
+        </div>
+
+    </aside>
+
+
+    <main class="main-content">
+
+        <div class="content-header">
+
+            <h1>Dashboard</h1>
+
+            <div class="header-buttons">
+
+                <button class="expense-btn" id="addExpenseBtn">
+                    + Add an Expense
+                </button>
+
+                <button class="settle-btn" id="settleBtn">
+                    Settle Up
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <section class="welcome" id="welcomeSection">
+
+            <h2>
+                Welcome to Expense Splitter
+            </h2>
+
+            <p>
+                Enter Your name to get started
+            </p>
+
+            <div class="name-section">
+
+                <input
+                    type="text"
+                    id="nameInput"
+                    placeholder="Enter your name">
+
+                <button class="create-btn" id="startBtn">
+                    Continue
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section class="card">
+
+            <div class="card-header">
+
+                <h2>
+                    👥 Current Group
+                </h2>
+
+                <button class="small-btn" id="createGroupBtn">
+                    + Create Group
+                </button>
+
+            </div>
+
+            <h3 id="currentGroupName">
+                No group selected
+            </h3>
+
+        </section>
+
+
+        <section class="card">
+
+            <div class="card-header">
+
+                <h2>
+                    Members
+                </h2>
+
+                <button class="small-btn" id="addMemberBtn">
+                    + Add Members
+                </button>
+
+            </div>
+
+            <div id="mainMember">
+            </div>
+
+        </section>
+
+
+        <section class="card">
+
+            <div class="card-header">
+
+                <h2>
+                    💰 Expenses
+                </h2>
+
+            </div>
+
+            <div id="expenseList">
+
+                <p class="empty-text">
+                    No expenses yet.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="card" id="settlementSection">
+
+            <div class="card-header">
+
+                <h2>
+                    💳 Settlement
+                </h2>
+
+            </div>
+
+            <div id="settlementList">
+
+                <p class="empty-text">
+                    No settlement needed.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <div class="modal" id="groupModal">
+
+        <div class="modal-content">
+
+            <h2>
+                Create Group
+            </h2>
+
+            <input
+                type="text"
+                id="groupNameInput"
+                placeholder="Enter group name">
+
+            <div class="modal-buttons">
+
+                <button id="cancelGroupBtn">
+                    Cancel
+                </button>
+
+                <button id="saveGroupBtn">
+                    Create Group
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="modal" id="memberModal">
+
+        <div class="modal-content">
+
+            <h2>
+                Add Member
+            </h2>
+
+            <input
+                type="text"
+                id="memberNameInput"
+                placeholder="Enter member name">
+
+            <div class="modal-buttons">
+
+                <button id="cancelMemberBtn">
+                    Cancel
+                </button>
+
+                <button id="saveMemberBtn">
+                    Add Member
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="modal" id="expenseModal">
+
+        <div class="modal-content">
+
+            <h2>
+                Add an Expense
+            </h2>
+
+
+            <label for="expenseDescription">
+                Description
+            </label>
+
+            <input
+                type="text"
+                id="expenseDescription"
+                placeholder="What was the expense?">
+
+
+            <label for="expenseAmount">
+                Amount
+            </label>
+
+            <input
+                type="number"
+                id="expenseAmount"
+                placeholder="Enter amount">
+
+
+            <label for="paidBy">
+                Paid by
+            </label>
+
+            <select id="paidBy">
+            </select>
+
+
+            <label>
+                Split between
+            </label>
+
+            <div id="splitMembers">
+            </div>
+
+
+            <p id="sharePreview">
+                Equal share: ₹0
+            </p>
+
+
+            <div class="modal-buttons">
+
+                <button id="cancelExpenseBtn">
+                    Cancel
+                </button>
+
+                <button id="saveExpenseBtn">
+                    Save Expense
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="Task3JS.js"></script>
+
+</body>
+
+</html>
